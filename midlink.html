@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIILEN - Midman холбоос</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+        .midman-avatar {
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+        .card-hover:hover .midman-avatar {
+            transform: scale(1.05);
+        }
+        /* Logo animation */
+        .logo-bounce {
+            animation: bounce-subtle 2s infinite;
+        }
+        @keyframes bounce-subtle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 text-gray-800">
+
+    <!-- Main Container -->
+    <main class="w-full max-w-md mx-auto space-y-6">
+        
+        <!-- Header Section -->
+        <div class="text-center space-y-2 mb-8 animate-fade-in-down">
+            <div class="inline-block relative">
+                <div class="absolute inset-0 bg-blue-500 blur-lg opacity-20 rounded-full"></div>
+                <!-- 
+                   SIILEN PAGE LOGO 
+                   Доорх src="..." хэсэгт page-ийнхээ логоны линкийг хийнэ үү.
+                -->
+                <img src="https://i.ibb.co/LzVVnrtB/554789719-1117680107138553-6360799964175527569-n.jpg" 
+                     alt="SIILEN Logo" 
+                     class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-xl relative z-10 logo-bounce">
+                
+                <!-- Online indicator for Page -->
+                <span class="absolute bottom-1 right-1 w-6 h-6 bg-green-500 border-4 border-white rounded-full z-20"></span>
+            </div>
+
+            <h1 class="text-3xl font-bold tracking-tight text-gray-900 mt-4">S I I L E N</h1>
+            <div class="h-1 w-16 bg-blue-500 mx-auto rounded-full"></div>
+            <p class="text-gray-600 text-sm px-4 pt-2">
+                Та холбогдох товч дээр дарж манай MIDMAN-үүдтэй холбогдоорой
+            </p>
+        </div>
+
+        <!-- Midman List -->
+        <div class="space-y-4">
+            
+            <!-- Midman 1: Badrakh Enkhbaatar -->
+            <div class="glass-card card-hover rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
+                <div class="relative">
+                    <img src="https://i.ibb.co/F4XyCdV5/589035496-1233284968856773-1067146699455195158-n.jpg" 
+                         alt="Badrakh Enkhbaatar" 
+                         class="w-16 h-16 rounded-full border-2 border-white shadow-sm midman-avatar bg-gray-100">
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-1 mb-3">
+                        <h3 class="font-bold text-gray-900">Badrakh Enkhbaatar</h3>
+                        <i class="fas fa-check-circle text-blue-500 text-xs" title="Verified"></i>
+                    </div>
+                    
+                    <a href="https://www.facebook.com/Midman.siilen" target="_blank" class="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 px-4 rounded-xl transition-colors font-medium">
+                        <i class="fab fa-facebook-messenger"></i>
+                        Холбогдох
+                    </a>
+                </div>
+            </div>
+
+            <!-- Midman 2: Jargalsaikhan -->
+            <div class="glass-card card-hover rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
+                <div class="relative">
+                    <img src="https://i.ibb.co/FbRQByFq/557149993-2003046580431595-7428406203553023357-n.jpg" 
+                         alt="Jargalsaikhan" 
+                         class="w-16 h-16 rounded-full border-2 border-white shadow-sm midman-avatar bg-gray-100">
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-1 mb-3">
+                        <h3 class="font-bold text-gray-900">Жаргалсайхан</h3>
+                        <i class="fas fa-check-circle text-blue-500 text-xs" title="Verified"></i>
+                    </div>
+                    
+                    <a href="https://www.facebook.com/jargalsaikhan.official" target="_blank" class="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 px-4 rounded-xl transition-colors font-medium">
+                        <i class="fab fa-facebook-messenger"></i>
+                        Холбогдох
+                    </a>
+                </div>
+            </div>
+
+            <!-- Midman 3: Nyamdorj N. -->
+            <div class="glass-card card-hover rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
+                <div class="relative">
+                    <img src="https://i.ibb.co/BHkTLZVq/616553502-1411145973740532-4438821650608835210-n.jpg" 
+                         alt="Nyamdorj N." 
+                         class="w-16 h-16 rounded-full border-2 border-white shadow-sm midman-avatar bg-gray-100">
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-1 mb-3">
+                        <h3 class="font-bold text-gray-900">Нямдорж Н.</h3>
+                        <i class="fas fa-check-circle text-blue-500 text-xs" title="Verified"></i>
+                    </div>
+                    
+                    <a href="https://www.facebook.com/nymaa.nymka.1048" target="_blank" class="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 px-4 rounded-xl transition-colors font-medium">
+                        <i class="fab fa-facebook-messenger"></i>
+                        Холбогдох
+                    </a>
+                </div>
+            </div>
+
+            <!-- Midman 4: Bat Orgil -->
+            <div class="glass-card card-hover rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
+                <div class="relative">
+                    <img src="https://i.ibb.co/pjDMqC2W/611885331-886529094023070-2185134643863119720-n.jpg" 
+                         alt="Bat Orgil" 
+                         class="w-16 h-16 rounded-full border-2 border-white shadow-sm midman-avatar bg-gray-100">
+                </div>
+                <div class="flex-1">
+                    <div class="flex items-center gap-1 mb-3">
+                        <h3 class="font-bold text-gray-900">Bat Orgil</h3>
+                        <i class="fas fa-check-circle text-blue-500 text-xs" title="Verified"></i>
+                    </div>
+                    
+                    <a href="https://www.facebook.com/bat.orgil.166546" target="_blank" class="flex items-center justify-center gap-2 w-full bg-blue-600 hover:bg-blue-700 text-white text-sm py-2 px-4 rounded-xl transition-colors font-medium">
+                        <i class="fab fa-facebook-messenger"></i>
+                        Холбогдох
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="text-center pt-8 pb-4 text-gray-400 text-xs">
+            <p>&copy; 2026 SIILEN Page. All rights reserved.</p>
+        </footer>
+
+    </main>
+</body>
+</html>
