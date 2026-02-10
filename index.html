@@ -32,6 +32,40 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
         }
+
+        /* Sticky Note Style */
+        .sticky-note {
+            position: absolute;
+            top: -15px;
+            right: 20px;
+            background-color: #fef3c7; /* Шар өнгө */
+            color: #92400e; /* Бор шаргал текст */
+            padding: 8px 12px;
+            font-size: 11px;
+            line-height: 1.2;
+            font-weight: 700;
+            transform: rotate(3deg); /* Бага зэрэг муруйлгах */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            border-radius: 2px;
+            z-index: 30;
+            max-width: 120px;
+            text-align: center;
+            border: 1px solid #fcd34d;
+        }
+
+        /* Scotch Tape Effect */
+        .sticky-note::after {
+            content: '';
+            position: absolute;
+            top: -8px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 10px;
+            background-color: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+            backdrop-filter: blur(1px);
+        }
     </style>
 </head>
 <body class="min-h-screen flex flex-col items-center justify-center p-4 text-gray-800">
@@ -43,10 +77,6 @@
         <div class="text-center space-y-2 mb-8 animate-fade-in-down">
             <div class="inline-block relative">
                 <div class="absolute inset-0 bg-blue-500 blur-lg opacity-20 rounded-full"></div>
-                <!-- 
-                   SIILEN PAGE LOGO 
-                   Доорх src="..." хэсэгт page-ийнхээ логоны линкийг хийнэ үү.
-                -->
                 <img src="https://i.ibb.co/LzVVnrtB/554789719-1117680107138553-6360799964175527569-n.jpg" 
                      alt="SIILEN Logo" 
                      class="w-24 h-24 rounded-full object-cover border-4 border-white shadow-xl relative z-10 logo-bounce">
@@ -63,7 +93,8 @@
         </div>
 
         <!-- Midman List -->
-        <div class="space-y-4">
+        <!-- Зайг хангалттай том (space-y-12) байлгах нь note давхарлахаас сэргийлнэ -->
+        <div class="space-y-12">
             
             <!-- Midman 1: Badrakh Enkhbaatar -->
             <div class="glass-card card-hover rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
@@ -85,8 +116,16 @@
                 </div>
             </div>
 
-            <!-- Midman 2: Jargalsaikhan -->
-            <div class="glass-card card-hover rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
+            <!-- Midman 2: Jargalsaikhan (STICKY NOTE HERE) -->
+            <!-- Note: added 'relative' class to parent div to position the note -->
+            <div class="glass-card relative card-hover rounded-2xl p-4 shadow-sm hover:shadow-md transition-all duration-300 flex items-center gap-4">
+                
+                <!-- STICKY NOTE Start -->
+                <div class="sticky-note">
+                    Лхагва гарагт<br>мид хийхгүй 📌
+                </div>
+                <!-- STICKY NOTE End -->
+
                 <div class="relative">
                     <img src="https://i.ibb.co/FbRQByFq/557149993-2003046580431595-7428406203553023357-n.jpg" 
                          alt="Jargalsaikhan" 
